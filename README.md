@@ -2,6 +2,12 @@
 
 用于记录入门 gin 框架
 
+## Start
+
+```sh
+nodemon --exec go run main.go --signal SIGTERM
+```
+
 ## Reference
 
 [Gin 文档](https://gin-gonic.com/zh-cn/docs/)
