@@ -19,11 +19,9 @@ func loginIn(r *gin.RouterGroup) {
 			})
 			return
 		}
-		name := c.PostForm("name")
-		password := c.PostForm("password")
 		c.JSON(http.StatusOK, gin.H{
-			"name":     name,
-			"password": password,
+			"name":     loginReq.Name,
+			"password": loginReq.Password,
 			"message":  "success",
 		})
 	})

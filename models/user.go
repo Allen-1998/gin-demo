@@ -1,6 +1,6 @@
 package models
 
 type LoginReq struct {
-	Name     string `form:"name" binding:"required"`
-	Password int    `form:"password" binding:"required"`
+	Name     string `json:"name" binding:"required"`
+	Password string `json:"password" binding:"required"`
 }
