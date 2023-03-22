@@ -3,18 +3,15 @@ package user
 import (
 	"net/http"
 
+	"gin-demo/models"
+
 	"github.com/gin-gonic/gin"
 )
-
-type LoginReq struct {
-	Name     string `form:"name" binding:"required"`
-	Password int    `form:"password" binding:"required"`
-}
 
 func loginIn(r *gin.RouterGroup) {
 
 	r.POST("/login", func(c *gin.Context) {
-		var loginReq LoginReq
+		var loginReq models.LoginReq
 		err := c.Bind(&loginReq)
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
