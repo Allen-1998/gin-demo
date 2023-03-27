@@ -12,10 +12,9 @@ func loginIn(r *gin.RouterGroup) {
 
 	r.POST("/login", func(c *gin.Context) {
 		var loginReq models.LoginReq
-		err := c.Bind(&loginReq)
-		if err != nil {
+		if err := c.ShouldBindJSON(&loginReq); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
-				"message": "请求参数异常",
+				"message": err.Error(),
 			})
 			return
 		}
