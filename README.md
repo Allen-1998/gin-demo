@@ -10,6 +10,6 @@ nodemon --exec go run main.go --signal SIGTERM
 
 ## Reference
 
-[Gin 文档](https://gin-gonic.com/zh-cn/docs/)
-[Go 规范](https://golang.google.cn/doc/effective_go)
-[Response Status 规范](https://pkg.go.dev/net/http#StatusOK)
+- [Gin 文档](https://gin-gonic.com/zh-cn/docs/)
+- [Go 规范](https://golang.google.cn/doc/effective_go)
+- [Response Status 规范](https://pkg.go.dev/net/http#StatusOK)
